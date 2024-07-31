@@ -1,8 +1,8 @@
 document.getElementById("redirectButton").addEventListener("click", () => {
   if (!localStorage.getItem("token")) {
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "https://jessicarhoades.onrender.com/login";
   } else {
-    window.location.href = "http://localhost:3000/chat";
+    window.location.href = "https://jessicarhoades.onrender.com/chat";
   }
 });
 

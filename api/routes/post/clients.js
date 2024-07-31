@@ -16,7 +16,9 @@ module.exports = {
 
     async function verify(token) {
       try {
-        let res = await axios.get(`http://localhost:3000/api/verify/${token}`);
+        let res = await axios.get(
+          `https://jessicarhoades.onrender.com/api/verify/${token}`
+        );
         return res.data.data;
       } catch (err) {
         return false;

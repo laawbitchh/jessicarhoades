@@ -1,4 +1,4 @@
-const ws = new WebSocket("ws://localhost:3001");
+const ws = new WebSocket("ws://jessicarhoades.onrender.com:3001");
 
 ws.onopen = async () => {
   let msg = {

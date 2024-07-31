@@ -5,7 +5,7 @@ document.getElementById("username").textContent = username;
 document.title = `Jessica Rhoades | Chat avec ${username}`;
 
 // Connexion WebSocket
-const ws = new WebSocket("ws://localhost:3001");
+const ws = new WebSocket("ws://jessicarhoades.onrender.com:3001");
 
 ws.onopen = () => {
   let msg = {
@@ -59,7 +59,7 @@ function sendMessage() {
 
 async function getMessages() {
   let res = await axios.get(
-    `http://localhost:3000/api/messages/Jess/${username}`
+    `https://jessicarhoades.onrender.com/api/messages/Jess/${username}`
   );
   let data = res.data;
   for (msg of data) {

@@ -4,7 +4,9 @@ if (!localStorage.getItem("token")) {
   const getUsername = async (token) => {
     try {
       console.log(token);
-      let resp = await axios.get(`http://localhost:3000/api/verify/${token}`);
+      let resp = await axios.get(
+        `https://jessicarhoades.onrender.com/api/verify/${token}`
+      );
       return resp.data.data;
     } catch (error) {
       console.error(
@@ -58,7 +60,7 @@ if (!localStorage.getItem("token")) {
 
       // Remplacez 'url_de_votre_api' par l'URL de votre API
       const response = await axios.post(
-        "http://localhost:3000/api/clients",
+        "https://jessicarhoades.onrender.com/api/clients",
         {},
         { headers }
       );
@@ -105,7 +107,7 @@ if (!localStorage.getItem("token")) {
   async function checkUnreadMessages(username) {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/unreadMessages/${username}`
+        `https://jessicarhoades.onrender.com/api/unreadMessages/${username}`
       );
       return response.data.length > 0; // Retourne true si des messages non lus existent
     } catch (error) {
@@ -126,7 +128,7 @@ if (!localStorage.getItem("token")) {
 
     // Remplacez 'url_de_votre_api' par l'URL de votre API
     let res = await axios.post(
-      `http://localhost:3000/api/decrypt/${encryptedPassword}`,
+      `https://jessicarhoades.onrender.com/api/decrypt/${encryptedPassword}`,
       {},
       { headers }
     );
@@ -353,7 +355,7 @@ if (!localStorage.getItem("token")) {
 
       // Remplacez 'url_de_votre_api' par l'URL de votre API
       let response = await axios.post(
-        `http://localhost:3000/api/money/add/${input.value}/${username}`,
+        `https://jessicarhoades.onrender.com/api/money/add/${input.value}/${username}`,
         {},
         { headers }
       );
@@ -376,7 +378,7 @@ if (!localStorage.getItem("token")) {
 
       // Remplacez 'url_de_votre_api' par l'URL de votre API
       let response = await axios.post(
-        `http://localhost:3000/api/money/remove/${input.value}/${username}`,
+        `https://jessicarhoades.onrender.com/api/money/remove/${input.value}/${username}`,
         {},
         { headers }
       );
@@ -423,7 +425,7 @@ if (!localStorage.getItem("token")) {
 
       // Remplacez 'url_de_votre_api' par l'URL de votre API
       axios.post(
-        `http://localhost:3000/api/delete/${username}`,
+        `https://jessicarhoades.onrender.com/api/delete/${username}`,
         {},
         { headers }
       );

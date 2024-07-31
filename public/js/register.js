@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/register",
+          "https://jessicarhoades.onrender.com/api/register",
           {
             username: username,
             password: password,

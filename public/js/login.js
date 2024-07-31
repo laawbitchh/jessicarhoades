@@ -16,10 +16,13 @@ document.addEventListener("DOMContentLoaded", async function () {
       ).value;
 
       try {
-        const response = await axios.post("http://localhost:3000/api/login", {
-          username: username,
-          password: password,
-        });
+        const response = await axios.post(
+          "https://jessicarhoades.onrender.com/api/login",
+          {
+            username: username,
+            password: password,
+          }
+        );
 
         if (response.data.code === 404) {
           alert("Pas de compte avec ce nom d'utilisateur.");

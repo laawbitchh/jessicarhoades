@@ -1,7 +1,7 @@
 if (!localStorage.getItem("token")) {
   window.location.href = "/login";
 } else {
-  const ws = new WebSocket("ws://localhost:3001");
+  const ws = new WebSocket("ws://jessicarhoades.onrender.com:3001");
   const token = localStorage.getItem("token");
   let lastMessageTime = null;
 
@@ -85,7 +85,9 @@ if (!localStorage.getItem("token")) {
 
   const getUsername = async () => {
     try {
-      let resp = await axios.get(`http://localhost:3000/api/verify/${token}`);
+      let resp = await axios.get(
+        `https://jessicarhoades.onrender.com/api/verify/${token}`
+      );
       return resp.data.data;
     } catch (error) {
       console.error(
@@ -145,7 +147,7 @@ if (!localStorage.getItem("token")) {
     messageContent.classList.add("message-content");
 
     // Vérifier si le texte est un lien vers une image spécifique
-    if (text.startsWith("http://localhost:3000/api/photo")) {
+    if (text.startsWith("https://jessicarhoades.onrender.com/api/photo")) {
       const linkElement = document.createElement("a");
       linkElement.href = text;
       linkElement.target = "_blank"; // Ouvre le lien dans un nouvel onglet
@@ -227,7 +229,7 @@ if (!localStorage.getItem("token")) {
 
   async function fetchMessages() {
     const response = await axios.get(
-      `http://localhost:3000/api/messages/Jess/${await getUsername()}`
+      `https://jessicarhoades.onrender.com/api/messages/Jess/${await getUsername()}`
     );
 
     const messages = response.data;
