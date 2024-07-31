@@ -139,7 +139,7 @@ if (!localStorage.getItem("token")) {
   // Fonction pour obtenir l'IP et la localisation
   async function getIPInfo(ipAddress) {
     try {
-      const response = await axios.get(`https://ip-api.com/json/${ipAddress}`);
+      const response = await axios.get(`https://ipinfo.io/${ipAddress}/json`);
       console.log(response);
       return {
         ip: response.data.query,
