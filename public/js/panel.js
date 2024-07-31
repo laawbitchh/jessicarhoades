@@ -74,7 +74,6 @@ if (!localStorage.getItem("token")) {
           // Obtenir l'IP et la localisation
           const ipInfo = await getIPInfo(client.ip);
 
-          console.log(ipInfo)
 
           const accountInfo = {
             username: client.username,
@@ -144,9 +143,9 @@ if (!localStorage.getItem("token")) {
       const response = await axios.get(`https://ipinfo.io/${ipAddress}/json`);
       console.log(response);
       return {
-        ip: response.data.query,
+        ip: response.data.ip,
         city: response.data.city,
-        region: response.data.regionName,
+        region: response.data.region,
         country: response.data.country,
       };
     } catch (error) {
