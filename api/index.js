@@ -3,6 +3,9 @@ const userModel = require("./models/user.model");
 const fs = require("fs"),
   express = require("express"),
   app = express(),
+  server = require("http").Server(app),
+  ws = require("ws"),
+  wss = new ws.Server({ server }),
   cors = require("cors"),
   path = require("path"),
   mongoose = require("mongoose"),
@@ -48,9 +51,6 @@ const loadDatabase = async (url) => {
 };
 
 const loadWsServer = () => {
-  const server = require("http").Server(app);
-  const ws = require("ws");
-  const wss = new ws.Server({ server });
 
   wss.on("connection", async (ws) => {
     ws.on("message", async (message) => {
