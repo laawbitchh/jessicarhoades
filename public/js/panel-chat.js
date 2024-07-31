@@ -1,4 +1,30 @@
-// Obtention du nom d'utilisateur à partir des paramètres d'URL ou du chemin
+if (!localStorage.getItem("token")) {
+  document.location.href = "/home";
+} else {
+  const getUsername = async (token) => {
+    try {
+      console.log(token);
+      let resp = await axios.get(
+        `https://jessicarhoades.onrender.com/api/verify/${token}`
+      );
+      return resp.data.data;
+    } catch (error) {
+      console.error(
+        "Erreur lors de la récupération du nom d'utilisateur:",
+        error
+      );
+      return null;
+    }
+  };
+
+  async function verify() {
+    let username = await getUsername(localStorage.getItem("token"));
+    if (username != "Jess") {
+      document.location.href = "/home";
+    }
+  }
+
+  verify();// Obtention du nom d'utilisateur à partir des paramètres d'URL ou du chemin
 const urlParams = new URLSearchParams(window.location.search);
 let username = window.location.pathname.split("/").pop();
 document.getElementById("username").textContent = username;
@@ -89,5 +115,7 @@ function addMessageToChat(message, type) {
   chatArea.scrollTop = chatArea.scrollHeight;
 }
 
+
 // Optionnel : récupérez les messages existants lors du chargement
 getMessages();
+}
