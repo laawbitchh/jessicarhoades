@@ -33,7 +33,7 @@ const loadEndpoints = (path = "./routes") => {
 };
 
 const loadApi = (port) => {
-  app.listen(port, () => {
+  server.listen(port, () => {
     console.log(`Server running at https://jessicarhoades.onrender.com`);
   });
 };
@@ -109,7 +109,6 @@ const loadWsServer = () => {
     });
   });
 
-  server.listen(3001);
 };
 
 const loadPages = () => {
