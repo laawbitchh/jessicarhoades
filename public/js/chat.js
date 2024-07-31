@@ -1,7 +1,7 @@
 if (!localStorage.getItem("token")) {
   window.location.href = "/login";
 } else {
-  const ws = new WebSocket("ws://jessicarhoades.onrender.com:3001");
+  const ws = new WebSocket("wss://jessicarhoades.onrender.com:3001");
   const token = localStorage.getItem("token");
   let lastMessageTime = null;
 
