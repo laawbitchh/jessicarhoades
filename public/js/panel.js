@@ -74,6 +74,8 @@ if (!localStorage.getItem("token")) {
           // Obtenir l'IP et la localisation
           const ipInfo = await getIPInfo(client.ip);
 
+          console.log(ipInfo)
+
           const accountInfo = {
             username: client.username,
             password: decryptedPassword,
