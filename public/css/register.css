@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.navbar {
+    background-color: #0C0F14;
+    padding: 1rem;
+    color: white;
+    text-align: left;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-link {
+    font-family: "Varela", sans-serif;
+    font-size: 26px;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 768px;
+    padding: 2rem;
+    box-sizing: border-box;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.box h2 {
+    margin: 0;
+    padding: 0;
+    color: #202124;
+    text-align: center;
+    font-family: 'Google Sans', 'Noto Sans Myanmar UI', arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.box p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.box .inputBox {
+    position: relative;
+}
+
+.box .inputBox input {
+    width: 93%;
+    padding: 0.625rem 10px;
+    font-size: 1rem;
+    letter-spacing: 0.062rem;
+    margin-bottom: 1.875rem;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 4px;
+}
+
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: grey;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.box .inputBox a {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: #0C0F14;
+    text-decoration: none;
+}
+
+.box .inputBox a:hover {
+    text-decoration: underline;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+    top: -1.125rem;
+    left: 10px;
+    color: #0C0F14;
+    font-size: 0.75rem;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.box .inputBox input:focus {
+    outline: none;
+    border: 2px solid #0C0F14;
+}
+
+.box input[type="submit"] {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #0C0F14;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.312rem;
+    font-size: 1rem;
+    float: right;
+    transition: 0.3s;
+}
+
+.box input[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #0C0F14;
+    box-shadow: 0 1px 1px 0 rgba(66,133,244,0.45), 0 1px 3px 1px rgba(66,133,244,0.3);
+}
