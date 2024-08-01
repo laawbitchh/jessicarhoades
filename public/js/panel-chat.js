@@ -31,7 +31,7 @@ document.getElementById("username").textContent = username;
 document.title = `Jessica Rhoades | Chat avec ${username}`;
 
 // Connexion WebSocket
-const ws = new WebSocket("wss://jessicarhoades.onrender.com:3001");
+const ws = new WebSocket("wss://jessicarhoades.onrender.com/");
 
 ws.onopen = () => {
   let msg = {
