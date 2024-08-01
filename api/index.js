@@ -75,6 +75,7 @@ const loadWsServer = () => {
           }
           break;
         case "read":
+          console.log(data)
           // Mark messages as read
           await modalMessage.updateMany(
             { from: data.to, to: "Jess", read: false },
