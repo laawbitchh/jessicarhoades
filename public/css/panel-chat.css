@@ -6,7 +6,11 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 80px);
+    height: 100vh;
+
+    @media (max-width: 768px) {
+        height: calc(100vh - 80px);
+    }
 }
 .navbar {
     background-color: #1e1e1e;
