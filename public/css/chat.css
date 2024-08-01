@@ -10,7 +10,7 @@ body {
     color: #F9F9FA;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 80px);
+    height: 100vh;
     justify-content: flex-end;
     margin-left: 400px;
     margin-right: 400px;
@@ -21,6 +21,7 @@ body {
     @media (max-width: 768px) {
         margin-left: 0px; /* Ajustement pour les écrans plus petits */
         margin-right: 0px; /* Ajustement pour les écrans plus petits */
+        height: calc(100vh - 80px);
       }
 }
 
