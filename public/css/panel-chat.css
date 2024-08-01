@@ -6,7 +6,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 80px);
 }
 .navbar {
     background-color: #1e1e1e;
