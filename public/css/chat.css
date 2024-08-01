@@ -10,7 +10,7 @@ body {
     color: #F9F9FA;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 80px);
     justify-content: flex-end;
     margin-left: 400px;
     margin-right: 400px;
