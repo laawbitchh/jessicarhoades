@@ -39,6 +39,13 @@ ws.onopen = () => {
     from: "Jess",
   };
   ws.send(JSON.stringify(msg));
+
+    let readMsg = {
+    event: "read",
+    from: "Jess",
+    to: username,
+  };
+  ws.send(JSON.stringify(readMsg));
 };
 
 ws.onmessage = (event) => {
@@ -97,13 +104,6 @@ async function getMessages() {
         addMessageToChat(msg.content, "other");
     }
   }
-
-  let readMsg = {
-    event: "read",
-    from: "Jess",
-    to: username,
-  };
-  ws.send(JSON.stringify(readMsg));
 }
 
 function addMessageToChat(message, type) {
